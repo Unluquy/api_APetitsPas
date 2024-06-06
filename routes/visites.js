@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 router.get('/showcase', async (req, res) => {
    
     try {
-        const sqlQuery = 'SELECT * FROM visites GROUP BY ville ORDER BY creation';
+        const sqlQuery = 'SELECT * FROM visites ORDER BY creation';
         const rows = await pool.query(sqlQuery);
         res.status(200).json(rows);
 
